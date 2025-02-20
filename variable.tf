@@ -1,21 +1,13 @@
-variable "resource_group_name" {
-  type        = string
-  description = "Nom du groupe de ressources"
+variable "subscription_id"{
+  type=string
 }
 
-variable "location" {
-  type        = string
-  description = "Région Azure"
-  default     = "East US"
+variable "client_id"{
+  type=string
 }
-
-variable "storage_account_name" {
-  type        = string
-  description = "Nom du Storage Account"
+variable "client_secret"{
+  type=string
 }
-
-variable "account_tier" {
-  type        = string
-  description = "Tier du Storage Account"
-  default     = "Standard"
+variable "tenant_id"{
+  type=string
 }
