@@ -1,3 +1,3 @@
-output "storage_account_id" {
-  value = module.storage_account.storage_account_id
+output "storage_account_ids" {
+  value = module.storage_accounts.storage_account_ids
 }
