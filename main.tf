@@ -4,7 +4,11 @@ locals {
 
   storage_accounts = {
     "sa1" = { name = "storageaccount01", account_tier = "Standard", replication = "LRS" }
-    "sa2" = { name = "storageaccount02", account_tier = "Premium", replication = "GRS" }
+    "sa2" = { name = "storageaccount02", account_tier = "Standard", replication = "GRS" }
+    "sa3" = { name = "storageaccount03", account_tier = "Standard", replication = "ZRS" }
+    "sa4" = { name = "storageaccount04", account_tier = "Premium", replication = "LRS" }
+    "sa5" = { name = "storageaccount05", account_tier = "Premium", replication = "GRS" }
+    "sa6" = { name = "storageaccount06", account_tier = "Premium", replication = "ZRS" }
   }
 }
 
