@@ -1,3 +1,3 @@
-output "storage_account_id" {
-  value = azurerm_storage_account.storage.id
+output "storage_account_ids" {
+  value = { for key, sa in azurerm_storage_account.storage : key => sa.id }
 }
