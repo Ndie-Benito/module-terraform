@@ -1,8 +1,9 @@
-module "storage_account" {
-  source = "./module_storage_account/"
-
-  storage_account_benito  = local.storage_account_name
-  resource_group_benito   = local.resource_group_name
-  location              = local.location
-  account_tier          = local.account_tier
+module "storage_accounts" {
+  source               = "./module_storage_account/"
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+  storage_accounts     = {
+    "sa1" = { name = "storageaccount01", account_tier = "Standard", replication = "LRS" }
+    "sa2" = { name = "storageaccount02", account_tier = "Premium", replication = "GRS" }
+  }
 }
